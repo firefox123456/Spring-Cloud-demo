@@ -1,0 +1,16 @@
+server:
+  port: 8882
+  servlet:
+    context-path: /
+
+spring:
+  rabbitmq:
+    host: 192.168.59.122
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual
+      direct:
+        acknowledge-mode: manual

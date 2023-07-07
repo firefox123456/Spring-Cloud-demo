@@ -1,0 +1,16 @@
+server:
+  port: 8881
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: loginService
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.59.122:8848
+      config:
+        server-addr: 192.168.59.122:8848
+        prefix: api-commons
+        file-extension: yaml
