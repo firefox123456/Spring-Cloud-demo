@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Spring-Cloud-Demo</artifactId>
+        <groupId>hunan.yishi.univercity</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>Spring-Cloud-Alibaba-Nacos-Demo</artifactId>
+
+
+    <dependencies>
+        <!--nacos作注册组件中心-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!--提供全栈的 web 开发特性，包括 Spring MVC 依赖和 Tomcat 容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--提供Spring和自动配置核心，这是Spring Boot的核心启动器，包含了自动配置、日志和YAML文件-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- 提供通用单元测试依赖，包括 JUnit, Hamcrest , Mockito-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--nacos配置中心 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!-- 加载bootstrap.yml-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+    </dependencies>
+<!--    统一配置测试开发生产环境-->
+    <profiles>
+        <profile>
+            <!--开发环境-->
+            <id>dev</id>
+            <!-- 加了这个，默认选中 -->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!--配置设置-->
+            <properties>
+                <activatedProperties>dev</activatedProperties>
+                <nacosAddress>http://localhost:8848/</nacosAddress>
+                <nacosNamespace>ecbfa210-4cfc-4936-ab2c-0859af68d447</nacosNamespace>
+<!--            <nacosGroup>nacos-group-${activatedProperties}</nacosGroup>-->
+            </properties>
+        </profile>
+        <profile>
+            <!--测试环境-->
+            <id>test</id>
+            <!-- 以下属性用于 bootstrap.yaml 文件中 可通过 @activatedProperties@ 获取配置的变量-->
+            <properties>
+                <activatedProperties>test</activatedProperties>
+                <nacosAddress>http://localhost:8848/</nacosAddress>
+                <nacosNamespace>ec7384fa-af29-44ca-a3d5-81def60f5406</nacosNamespace>
+                <!--<nacosGroup>nacos-group-${activatedProperties}</nacosGroup>-->
+            </properties>
+        </profile>
+        <!--生产环境-->
+        <profile>
+            <id>prod</id>
+            <properties>
+                <activatedProperties>prod</activatedProperties>
+                <nacosAddress>http://localhost:8848/</nacosAddress>
+                <nacosNamespace>33a42bd0-e959-407b-89f9-04eb82424e56</nacosNamespace>
+                <!--<nacosGroup>nacos-group-${activatedProperties}</nacosGroup>-->
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+</project>
