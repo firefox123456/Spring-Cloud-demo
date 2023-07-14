@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-commons" />
+        <module name="Spring-Cloud-Alibaba-Nacos-Demo" />
         <module name="test" />
         <module name="loginMoudle" />
       </profile>
