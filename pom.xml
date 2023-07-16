@@ -12,6 +12,7 @@
         <module>loginMoudle</module>
         <module>test</module>
         <module>Spring-Cloud-Alibaba-Nacos-Demo</module>
+        <module>huangqi-commom-demo</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
