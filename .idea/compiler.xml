@@ -9,9 +9,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-commons" />
         <module name="Spring-Cloud-Alibaba-Nacos-Demo" />
-        <module name="huangqi-commom-demo" />
+        <module name="common-mybatis-plus" />
         <module name="test" />
+        <module name="common-web" />
+        <module name="common-redis" />
         <module name="loginMoudle" />
+        <module name="common-base" />
       </profile>
     </annotationProcessing>
   </component>
