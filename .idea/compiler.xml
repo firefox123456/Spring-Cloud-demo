@@ -13,8 +13,8 @@
         <module name="test" />
         <module name="huangqi-gateway" />
         <module name="admin-api" />
-        <module name="huangqi-auth" />
         <module name="common-web" />
+        <module name="huangqi-auth" />
         <module name="admin-boot" />
         <module name="common-redis" />
         <module name="loginMoudle" />
