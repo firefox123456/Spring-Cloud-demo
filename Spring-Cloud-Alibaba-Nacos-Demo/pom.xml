@@ -63,7 +63,7 @@
             <properties>
                 <activatedProperties>dev</activatedProperties>
                 <nacosAddress>http://localhost:8848/</nacosAddress>
-                <nacosNamespace>ecbfa210-4cfc-4936-ab2c-0859af68d447</nacosNamespace>
+                <nacosNamespace>f4826565-eefb-4ee7-b59a-33e9de948552</nacosNamespace>
 <!--            <nacosGroup>nacos-group-${activatedProperties}</nacosGroup>-->
             </properties>
         </profile>

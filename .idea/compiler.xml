@@ -11,7 +11,11 @@
         <module name="Spring-Cloud-Alibaba-Nacos-Demo" />
         <module name="common-mybatis-plus" />
         <module name="test" />
+        <module name="huangqi-gateway" />
+        <module name="admin-api" />
+        <module name="huangqi-auth" />
         <module name="common-web" />
+        <module name="admin-boot" />
         <module name="common-redis" />
         <module name="loginMoudle" />
         <module name="common-base" />

@@ -13,6 +13,9 @@
         <module>test</module>
         <module>Spring-Cloud-Alibaba-Nacos-Demo</module>
         <module>huangqi-commom-demo</module>
+        <module>huangqi-auth</module>
+        <module>huangqi-admin</module>
+        <module>huangqi-gateway</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -58,6 +61,7 @@
               这样就可以引入mysql的驱动了，这样的好处就是可以在父工程统一一下整个工程的jar包依赖版本
               而且如果有的工程不需要一些jar就可以不进行引入
         -->
+
         <dependencies>
             <!--spring-boot-->
             <dependency>
@@ -67,6 +71,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!-- spring-cloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -75,6 +80,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!-- spring-cloud-alibaba -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
